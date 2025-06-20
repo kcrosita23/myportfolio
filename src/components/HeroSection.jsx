@@ -27,7 +27,7 @@ const HeroSection = ({ isDark, scrollY, scrollToSection }) => {
             className="text-5xl md:text-7xl font-bold mb-6
                         bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse"
           >
-            Kim Carlo Rosita
+            Kim Carlo
           </h1>
           <p
             className={`text-xl md:text-2xl mb-8 ${
