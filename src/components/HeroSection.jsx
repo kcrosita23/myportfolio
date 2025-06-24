@@ -27,7 +27,7 @@ const HeroSection = ({ isDark, scrollY, scrollToSection }) => {
           <div className="">
             <img
               src={DP}
-              alt="Hero"
+              alt="Hero Image"
               className="w-48 h-48 md:w-64 md:h-64 mx-auto mb-6 rounded-full shadow-lg"
             />
           </div>
