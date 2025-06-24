@@ -52,15 +52,15 @@ const App = () => {
       title: "System Engineer",
       company: "Everywhere Consulting Inc.",
       period: "March 2025 - Present",
-      description:
-        "Contributed as one of the engineers building enterprise web applications using React, Node.js, and cloud technologies.",
+      description: `Contributed as one of the engineers building enterprise applications using Magic Software's Magic xpa and Magic xpi platforms.
+                    Developed and maintained web applications, ensuring high performance and responsiveness.`,
     },
     {
       title: "Freelance Web Developer",
       company: "Self-employed",
       period: "Aug 2024 - Present",
       description: `Created responsive websites and web applications for various clients using modern frontend technologies. 
-                    Provided web development services to small businesses and startups, specializing in React`,
+                    Provided web development services to small businesses and startups, specializing in React, Node.js, and MongoDB.`,
     },
     {
       title: "Software Developer Coordinator Lead Intern",
@@ -73,17 +73,17 @@ const App = () => {
 
   const projects = [
     {
-      title: "Example: E-commerce Platform",
+      title: "E-commerce Platform: Coffee Shops",
       description:
-        "Full-stack e-commerce solution with payment integration and admin dashboard.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+        "Full-stack e-commerce solution with payment integration and product listing.",
+      tech: ["React", "Tailwind CSS", "Framer Motion"],
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
     },
     {
       title: "Portfolio Websites",
       description:
-        "Modern portfolio website with animations and responsive design.",
+        "Modern portfolio website with animations and responsive design for clients.",
       tech: ["React", "Tailwind CSS", "Framer Motion"],
       image:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop",
@@ -101,7 +101,7 @@ const App = () => {
   const skills = [
     { name: "Web Development", icon: Code, level: 95 },
     { name: "UI/UX Design", icon: Palette, level: 85 },
-    { name: "Mobile Development", icon: Smartphone, level: 80 },
+    { name: "Mobile Development", icon: Smartphone, level: 75 },
     { name: "Web Technologies", icon: Globe, level: 90 },
   ];
 

@@ -14,7 +14,7 @@ const AboutSection = ({ isDark, skills }) => {
                 isDark ? "text-gray-300" : "text-gray-600"
               }`}
             >
-              I'm a passionate full-stack developer with over 2 years of
+              I'm a passionate full-stack web developer with over 2 years of
               experience creating digital solutions that make a difference. I
               specialize in modern web technologies and love bringing creative
               ideas to life through code.
