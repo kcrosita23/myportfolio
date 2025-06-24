@@ -1,4 +1,5 @@
 import React from "react";
+import DP from "../assets/profile-pic.png";
 
 const HeroSection = ({ isDark, scrollY, scrollToSection }) => {
   return (
@@ -23,6 +24,13 @@ const HeroSection = ({ isDark, scrollY, scrollToSection }) => {
             opacity: Math.max(0, 1 - scrollY / 800),
           }}
         >
+          <div className="">
+            <img
+              src={DP}
+              alt="Hero"
+              className="w-48 h-48 md:w-64 md:h-64 mx-auto mb-6 rounded-full shadow-lg"
+            />
+          </div>
           <h1
             className="text-5xl md:text-7xl font-bold mb-6
                         bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse"
