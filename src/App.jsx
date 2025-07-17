@@ -87,6 +87,7 @@ const App = () => {
       tech: ["React", "Tailwind CSS", "Framer Motion"],
       image:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop",
+      ExternalLink: "https://github.com/kcrosita23/doctors",
     },
     {
       title: "Example: Task Management App",
