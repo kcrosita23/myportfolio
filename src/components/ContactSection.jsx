@@ -84,7 +84,7 @@ const ContactSection = ({ isDark }) => {
         "service_qrkl4es", // Replace with your EmailJS service ID
         "template_n65re2m", // Replace with your EmailJS template ID
         templateParams,
-        "ZHIMJdoveoAKc06gf" // Replace with your EmailJS public key
+        "jHhbzEOOwu4UuZxfF" // Replace with your EmailJS public key
       );
 
       setStatus({
