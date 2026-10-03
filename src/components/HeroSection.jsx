@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Github, Linkedin, MapPin } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Facebook, MapPin } from "lucide-react";
 import portrait from "../assets/profile-pic.png";
 import { profile } from "../data/portfolio";
 
@@ -17,8 +17,7 @@ export default function HeroSection() {
           <div className="hero-meta">
             <span><MapPin size={14} /> {profile.location}</span>
             <span className="meta-divider" />
-            <a href={profile.github} target="_blank" rel="noopener noreferrer" aria-label="Kim Carlo on GitHub (opens in a new tab)"><Github size={18} /></a>
-            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Kim Carlo on LinkedIn (opens in a new tab)"><Linkedin size={18} /></a>
+            <a href={profile.facebook} target="_blank" rel="noopener noreferrer" aria-label="Kim Carlo on Facebook (opens in a new tab)"><Facebook size={18} /></a>
           </div>
         </div>
         <div className="portrait-composition">

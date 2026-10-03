@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { ArrowUpRight, CheckCircle2, Github, Linkedin, LoaderCircle, Mail, MapPin, Phone, Send } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Facebook, LoaderCircle, Mail, MapPin, Phone, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { profile } from "../data/portfolio";
 import { validateContact } from "../lib/contactValidation";
@@ -61,7 +61,7 @@ export default function ContactSection() {
           <p>A website, a business application, or an idea worth exploring. Let's start a conversation.</p>
           <a className="contact-email" href={`mailto:${profile.email}`}>{profile.email}<ArrowUpRight size={20} /></a>
           <div className="contact-details"><a href={`tel:${profile.phoneHref}`}><Phone size={16} />{profile.phone}</a><span><MapPin size={16} />{profile.location}</span></div>
-          <div className="contact-socials"><a href={profile.github} target="_blank" rel="noopener noreferrer"><Github size={17} />GitHub<ArrowUpRight size={14} /><span className="sr-only"> (opens in a new tab)</span></a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin size={17} />LinkedIn<ArrowUpRight size={14} /><span className="sr-only"> (opens in a new tab)</span></a></div>
+          <div className="contact-socials"><a href={profile.facebook} target="_blank" rel="noopener noreferrer"><Facebook size={17} />Facebook<ArrowUpRight size={14} /><span className="sr-only"> (opens in a new tab)</span></a></div>
         </div>
         <form className="contact-form" ref={formRef} onSubmit={handleSubmit} noValidate aria-busy={isLoading}>
           <div className="form-heading"><span className="form-title">Send a note</span><Mail size={21} strokeWidth={1.5} /></div>

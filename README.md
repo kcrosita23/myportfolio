@@ -26,7 +26,7 @@ The build is generated in `dist/`, which is ignored by Git. Do not edit generate
 
 The authoritative content file is `src/data/portfolio.js`:
 
-- `profile`: name, role, contact details, and social URLs.
+- `profile`: name, role, contact details, and Facebook profile URL.
 - `navigation`: labels and section IDs.
 - `projects`: title, description, technology list, cover style, and optional repository URL.
 - `capabilities`: technology groups and supporting descriptions.

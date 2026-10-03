@@ -6,8 +6,7 @@ export const profile = {
   phone: "+63 917 397 1955",
   phoneHref: "+639173971955",
   location: "Metro Manila, Philippines",
-  github: "https://github.com/kcrosita23",
-  linkedin: "https://www.linkedin.com/in/kimcarlorosita/",
+  facebook: "https://www.facebook.com/kimcarlooooo/",
 };
 
 export const navigation = [

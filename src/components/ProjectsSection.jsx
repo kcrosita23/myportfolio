@@ -1,4 +1,4 @@
-import { ArrowUpRight, Coffee, Github, LayoutDashboard, Plus } from "lucide-react";
+import { ArrowUpRight, Coffee, Facebook, LayoutDashboard, Plus } from "lucide-react";
 import { profile, projects } from "../data/portfolio";
 
 // These are illustrative covers, not screenshots of deployed applications.
@@ -39,7 +39,7 @@ export default function ProjectsSection() {
             <div className="project-footer">{project.repository ? <a className="text-link" href={project.repository} target="_blank" rel="noopener noreferrer">{project.linkLabel}<ArrowUpRight size={16} /><span className="sr-only"> (opens in a new tab)</span></a> : <span className="project-status">{project.status}</span>}<span className="cover-disclaimer">Illustrative cover</span></div>
           </div>
         </article>)}</div>
-        <div className="work-more"><span>More code, experiments, and work in progress.</span><a className="text-link" href={profile.github} target="_blank" rel="noopener noreferrer"><Github size={17} /> Explore GitHub <ArrowUpRight size={16} /><span className="sr-only"> (opens in a new tab)</span></a></div>
+        <div className="work-more"><span>Let's connect and talk about your next idea.</span><a className="text-link" href={profile.facebook} target="_blank" rel="noopener noreferrer"><Facebook size={17} /> Connect on Facebook <ArrowUpRight size={16} /><span className="sr-only"> (opens in a new tab)</span></a></div>
       </div>
     </section>
   );
