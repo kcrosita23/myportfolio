@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="src/assets/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kim's Portfolio</title>
+    <meta name="theme-color" content="#17191b" />
+    <meta name="description" content="Kim Carlo Rosita is a full stack developer and system engineer in Metro Manila, building responsive websites and enterprise applications." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kim Carlo Rosita — Developer & System Engineer" />
+    <meta property="og:description" content="Thoughtful code. Meaningful digital experiences. Explore Kim Carlo's web projects, skills, and experience." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Kim Carlo Rosita — Developer & System Engineer" />
+    <meta name="twitter:description" content="Web development and enterprise systems, built with purpose and refined with care." />
+    <title>Kim Carlo Rosita — Developer & System Engineer</title>
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        const theme = savedTheme === "light" ? "light" : "dark";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      } catch { document.documentElement.style.colorScheme = "dark"; }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript><p>Please enable JavaScript to view this portfolio. You can reach Kim Carlo at <a href="mailto:kimcarlo23.dev@gmail.com">kimcarlo23.dev@gmail.com</a>.</p></noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

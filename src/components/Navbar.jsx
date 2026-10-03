@@ -1,104 +1,58 @@
-import React from "react";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 
-const Navbar = ({
-  isDark,
-  setIsDark,
-  isMenuOpen,
-  setIsMenuOpen,
-  scrollY,
-  navItems,
-  scrollToSection,
-}) => {
+export default function Navbar({ theme, onToggleTheme, activeSection, items }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuButton = useRef(null);
+  const nav = useRef(null);
+
+  useEffect(() => {
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape" && isOpen) {
+        setIsOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    const closeOutside = (event) => {
+      if (!nav.current?.contains(event.target)) setIsOpen(false);
+    };
+    const desktop = window.matchMedia("(min-width: 800px)");
+    const closeOnDesktop = () => { if (desktop.matches) setIsOpen(false); };
+    document.addEventListener("keydown", closeOnEscape);
+    document.addEventListener("pointerdown", closeOutside);
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => {
+      document.removeEventListener("keydown", closeOnEscape);
+      document.removeEventListener("pointerdown", closeOutside);
+      desktop.removeEventListener("change", closeOnDesktop);
+    };
+  }, [isOpen]);
+
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrollY > 50
-          ? isDark
-            ? "bg-black/80 backdrop-blur-md"
-            : "bg-white/80 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          <div
-            className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent
-                cursor-pointer"
-            onClick={() => scrollToSection("hero")}
-          >
-            Portfolio
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={` text-white transition-colors duration-300 relative group ${
-                  isDark ? "hover:text-blue-400" : "hover:text-blue-600"
-                }`}
-              >
-                {item.label}
-                <span
-                  className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                    isDark ? "bg-blue-400" : "bg-blue-600"
-                  }`}
-                ></span>
-              </button>
-            ))}
-          </div>
-          <div className="flex items-center space-x-4 hover:text-blue-600">
-            <button
-              onClick={() => setIsDark(!isDark)}
-              className={`p-2 rounded-full transition-colors duration-300 ${
-                isDark ? "hover:bg-white/10" : "hover:bg-gray-200"
-              }`}
-            >
-              {isDark ? (
-                <Sun size={20} className="hover:text-blue-600" />
-              ) : (
-                <Moon size={20} className="text-white hover:text-blue-600" />
-              )}
-            </button>
-
-            {/* Mobile Menu Button */}
-            <button
-              className={`md:hidden p-2 rounded-full transition-colors duration-300 ${
-                isDark ? "hover:bg-white/10" : "hover:bg-gray-200"
-              }`}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-          </div>
+    <header className="site-header" ref={nav}>
+      <nav className="shell nav-bar" aria-label="Main navigation">
+        <a href="#hero" className="brand" onClick={() => setIsOpen(false)} aria-label="Kim Carlo Rosita, home">
+          <span className="brand-mark">k<span>.</span></span><span>kim carlo<span className="brand-dot">.</span></span>
+        </a>
+        <div className="desktop-nav">
+          {items.map((item) => <a key={item.id} href={`#${item.id}`} className={activeSection === item.id ? "active" : ""}
+            aria-current={activeSection === item.id ? "location" : undefined}>{item.label}</a>)}
         </div>
-      </div>
-      {/* Mobile Navigation */}
-      <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen
-            ? isDark
-              ? "max-h-64 bg-black/90 backdrop-blur-md"
-              : "max-h-64 bg-white/90 backdrop-blur-md shadow-lg"
-            : "max-h-0"
-        }`}
-      >
-        <div className="px-4 py-4 space-y-4">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="block w-full text-left hover:text-blue-400 transition-colors duration-300"
-            >
-              {item.label}
-            </button>
-          ))}
+        <div className="nav-actions">
+          <button className="icon-button" onClick={onToggleTheme} aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}>
+            {theme === "dark" ? <Sun size={19} /> : <Moon size={19} />}
+          </button>
+          <a href="#contact" className="nav-contact">Let's talk <ArrowUpRight size={16} /></a>
+          <button className="icon-button menu-toggle" ref={menuButton} aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen} aria-controls="mobile-navigation" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
-      </div>
-    </nav>
+        <div id="mobile-navigation" className="mobile-nav" hidden={!isOpen}>
+          {items.map((item) => <a key={item.id} href={`#${item.id}`} onClick={() => setIsOpen(false)}
+            aria-current={activeSection === item.id ? "location" : undefined}>{item.label}<ArrowUpRight size={17} /></a>)}
+        </div>
+      </nav>
+    </header>
   );
-};
-
-export default Navbar;
+}

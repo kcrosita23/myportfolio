@@ -1,17 +1,6 @@
-import React from 'react';
+import { ArrowUp, Github, Linkedin } from "lucide-react";
+import { profile } from "../data/portfolio";
 
-const Footer = ({ isDark }) => {
-  return (
-    <footer className={`py-8 ${
-      isDark ? 'border-t border-white/10' : 'border-t border-gray-200'
-    }`}>
-      <div className={`container mx-auto px-4 text-center ${
-        isDark ? 'text-gray-400' : 'text-gray-600'
-      }`}>
-        <p>&copy; 2025 Kim Carlo. All rights reserved.</p>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+export default function Footer() {
+  return <footer className="site-footer"><div className="shell footer-inner"><p>© {new Date().getFullYear()} {profile.name}</p><span className="footer-note">Made with care. Built with React.</span><div className="footer-links"><a href={profile.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><Github size={17} /></a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><Linkedin size={17} /></a><a href="#hero" className="back-top">Back to top <ArrowUp size={15} /></a></div></div></footer>;
+}
