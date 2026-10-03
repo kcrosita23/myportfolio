@@ -31,10 +31,11 @@ The authoritative content file is `src/data/portfolio.js`:
 - `projects`: title, description, technology list, cover style, and optional repository URL.
 - `capabilities`: technology groups and supporting descriptions.
 - `experiences`: employment history and descriptions.
+- `biography` and `toolGroups`: programming and professional background, plus everyday tools.
 
-Only add achievements, clients, outcomes, dates, and availability statements you can confirm. The employment dates carried over from the original site should be reviewed when your circumstances change.
+Only add achievements, clients, outcomes, dates, and availability statements you can confirm. The biography, role progression, and project dates were updated from the supplied resume. Education and academic honors are omitted at the owner's request. Review employment dates when your circumstances change. Current website contact details remain in place because the resume lists different ones.
 
-The current project covers are **illustrations**, not screenshots of deployed projects. The task management item is explicitly a concept example. Projects without a supplied destination show a descriptive status instead of an inactive button. The original `doctors` repository URL is retained; verify its public accessibility before publishing.
+The current project covers are **illustrations**, not screenshots of deployed projects. Selected work includes the doctor's portfolio, coffee shop website, and BBCCC loan/payroll systems described in the resume. Project cards include dates and contributions. Projects without a supplied destination show a descriptive status instead of an inactive button. The original `doctors` repository URL is retained; verify its public accessibility before publishing.
 
 To add a real project screenshot, store it under `src/assets/`, import it into the content module, and update `ProjectCover` in `src/components/ProjectsSection.jsx` to render the image with suitable alternative text, dimensions, and lazy loading. Remove the illustration caption for actual screenshots.
 
@@ -82,5 +83,5 @@ Publish the contents of `dist/` to your static host after a successful build. No
 3. Check both themes, theme persistence, project/social links, and navigation anchors.
 4. Use the keyboard to test the skip link, mobile menu, Escape, and contact fields.
 5. Check empty/invalid form input, success and failure presentation, and a deliberate live delivery test.
-6. Confirm real project destinations, personal details, employment dates, and illustrative/concept labels.
+6. Confirm real project destinations, personal details, employment dates, and illustrative-cover labels.
 7. Verify the favicon and metadata on the final deployed domain.
