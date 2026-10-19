@@ -3,6 +3,14 @@ import { profile, projects } from "../data/portfolio";
 
 // These are illustrative covers, not screenshots of deployed applications.
 function ProjectCover({ type }) {
+  if (type === "company") return (
+    <div className="project-cover cover-portfolio" aria-hidden="true">
+      <div className="mini-browser"><div className="browser-bar"><i /><i /><i /><span>everywhere consulting</span></div>
+        <div className="mini-portfolio"><span className="mini-label">EVERYWHERE CONSULTING INC.</span><strong>Solutions.<br /><em>Built for business.</em></strong><div className="mini-rule" /><span className="mini-pill">Explore our services ↗</span><div className="mini-orbit" /></div>
+      </div>
+      <span className="cover-caption">PRODUCTS / SOLUTIONS / SERVICES</span>
+    </div>
+  );
   if (type === "portfolio") return (
     <div className="project-cover cover-portfolio" aria-hidden="true">
       <div className="mini-browser"><div className="browser-bar"><i /><i /><i /><span>portfolio</span></div>
@@ -37,7 +45,11 @@ export default function ProjectsSection() {
             <h3>{project.title}</h3><p>{project.description}</p>
             <div className="project-contribution"><span>{project.period}</span><span>{project.contribution}</span></div>
             <ul className="tags" aria-label={`${project.title} technologies`}>{project.tech.map((tech) => <li key={tech}>{tech}</li>)}</ul>
-            <div className="project-footer">{project.repository ? <a className="text-link" href={project.repository} target="_blank" rel="noopener noreferrer">{project.linkLabel}<ArrowUpRight size={16} /><span className="sr-only"> (opens in a new tab)</span></a> : <span className="project-status">{project.status}</span>}<span className="cover-disclaimer">Illustrative cover</span></div>
+            <div className="project-footer"><div className="project-links">
+              {project.website && <a className="text-link" href={project.website} target="_blank" rel="noopener noreferrer">{project.id === "eci-website" ? "View website preview" : "Visit website"}<ArrowUpRight size={16} /><span className="sr-only"> (opens in a new tab)</span></a>}
+              {project.repository && <a className="text-link" href={project.repository} target="_blank" rel="noopener noreferrer">{project.linkLabel}<ArrowUpRight size={16} /><span className="sr-only"> (opens in a new tab)</span></a>}
+              {!project.website && !project.repository && <span className="project-status">{project.status}</span>}
+            </div><span className="cover-disclaimer">Illustrative cover</span></div>
           </div>
         </article>)}</div>
         <div className="work-more"><span>Let's connect and talk about your next idea.</span><a className="text-link" href={profile.facebook} target="_blank" rel="noopener noreferrer"><Facebook size={17} /> Connect on Facebook <ArrowUpRight size={16} /><span className="sr-only"> (opens in a new tab)</span></a></div>

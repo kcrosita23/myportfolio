@@ -28,14 +28,14 @@ The authoritative content file is `src/data/portfolio.js`:
 
 - `profile`: name, role, contact details, and Facebook profile URL.
 - `navigation`: labels and section IDs.
-- `projects`: title, description, technology list, cover style, and optional repository URL.
+- `projects`: title, description, technology list, cover style, and optional website and repository URLs.
 - `capabilities`: technology groups and supporting descriptions.
 - `experiences`: employment history and descriptions.
 - `biography` and `toolGroups`: programming and professional background, plus everyday tools.
 
 Only add achievements, clients, outcomes, dates, and availability statements you can confirm. The biography, role progression, and project dates were updated from the supplied resume. Education and academic honors are omitted at the owner's request. Review employment dates when your circumstances change. Current website contact details remain in place because the resume lists different ones.
 
-The current project covers are **illustrations**, not screenshots of deployed projects. Selected work includes the doctor's portfolio, coffee shop website, and BBCCC loan/payroll systems described in the resume. Project cards include dates and contributions. Projects without a supplied destination show a descriptive status instead of an inactive button. The original `doctors` repository URL is retained; verify its public accessibility before publishing.
+The current project covers are **illustrations**, not screenshots of deployed projects. Selected work includes Surgical Oncology, Kalinaw Coffee, the Everywhere Consulting Inc. website preview, and BBCCC loan/payroll systems. The three websites use the owner's supplied live URLs; the ECI destination is labeled as a preview. The doctor's repository link is also retained. Projects without a supplied destination show a descriptive status instead of an inactive button. The live destinations could not be reached from the editing environment, so their availability still needs a browser check before publishing.
 
 To add a real project screenshot, store it under `src/assets/`, import it into the content module, and update `ProjectCover` in `src/components/ProjectsSection.jsx` to render the image with suitable alternative text, dimensions, and lazy loading. Remove the illustration caption for actual screenshots.
 
