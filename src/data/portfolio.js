@@ -1,3 +1,4 @@
+import bbcccconnect from "../assets/projects/bbcccconnect.jpg";
 import surgicalOncology from "../assets/projects/surgical-oncology.jpg";
 import kalinaw from "../assets/projects/kalinaw.jpg";
 import eci from "../assets/projects/eci.jpg";
@@ -54,7 +55,7 @@ export const projects = [
   {
     id: "business-systems", number: "04", title: "Loan & payroll systems", category: "BBCCC / Enterprise applications",
     description: "Contributed to the design, development, and deployment of loan and payroll management systems using Magic Software.",
-    tech: ["Magic Software", "Magic Web Client"], cover: "systems", period: "Jun 2025 — Feb 2026", contribution: "Systems engineering & system design", status: "Enterprise project overview",
+    tech: ["Magic Software", "Magic Web Client"], image: bbcccconnect, period: "Jun 2025 — Feb 2026", contribution: "Systems engineering & system design", status: "Enterprise project overview",
   },
 ];
 

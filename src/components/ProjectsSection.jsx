@@ -1,20 +1,13 @@
-import { ArrowUpRight, Mail, LayoutDashboard, Plus } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { profile, projects } from "../data/portfolio";
 
 function ProjectCover({ project }) {
-  const preview = project.image ? (
-    <img src={project.image} alt={`${project.title} landing page`} width="1265" height="712" loading="lazy" decoding="async" />
-  ) : (
-    <div className="cover-tasks" style={{ height: "100%" }} aria-hidden="true"><div className="task-window">
-      <div className="task-header"><span><LayoutDashboard size={16} /> Business systems</span><Plus size={16} /></div>
-      <div className="task-columns">{["Loans", "Payroll", "Overview"].map((name, i) => <div key={name}><span className="task-column-name">{name}</span><div className={`mini-task task-${i}`}><span /><strong>{["Application management", "Payroll processing", "Clearer workflows"][i]}</strong><div className="task-lines" /><i /></div></div>)}</div>
-    </div><span className="cover-caption">PRACTICAL SYSTEMS. EVERYDAY OPERATIONS.</span></div>
-  );
+  const preview = <img src={project.image} alt={`${project.title} landing page`} width="1265" height="712" loading="lazy" decoding="async" />;
   return project.website ? (
     <a className="project-cover project-screenshot" href={project.website} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} website (opens in a new tab)`}>
       {preview}<span className="project-image-action">Visit website <ArrowUpRight size={18} /></span>
     </a>
-  ) : <div className={project.image ? "project-cover project-screenshot" : "project-cover project-illustration"}>{preview}</div>;
+  ) : <div className="project-cover project-screenshot">{preview}</div>;
 }
 export default function ProjectsSection() {
   return (

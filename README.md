@@ -35,7 +35,7 @@ The authoritative content file is `src/data/portfolio.js`:
 
 Only add achievements, clients, outcomes, dates, and availability statements you can confirm. The biography, role progression, and project dates were updated from the supplied resume. Education and academic honors are omitted at the owner's request. Review employment dates when your circumstances change. Current website contact details remain in place because the resume lists different ones.
 
-Selected work uses landing-page screenshots stored in `src/assets/projects/`. The public-site images and prominent Visit website buttons open the supplied destinations in a new tab. Repository links are omitted. BBCCC retains an illustrative cover until its landing page can be captured; the internal application returned Magic license error -119 during capture. Its internal address is not linked from the public portfolio.
+Selected work uses landing-page screenshots stored in `src/assets/projects/`. The public-site images and prominent Visit website buttons open the supplied destinations in a new tab. Repository links are omitted. BBCCC uses a screenshot of its signed-out landing page. Its internal address is not linked from the public portfolio.
 
 To refresh a screenshot, capture the landing page and replace its image file. Keep the 16:9 preview framing and review desktop and mobile layouts.
 
