@@ -1,4 +1,4 @@
-import { ArrowUpRight, Coffee, Facebook, LayoutDashboard, Plus } from "lucide-react";
+import { ArrowUpRight, Coffee, Mail, LayoutDashboard, Plus } from "lucide-react";
 import { profile, projects } from "../data/portfolio";
 
 // These are illustrative covers, not screenshots of deployed applications.
@@ -52,7 +52,7 @@ export default function ProjectsSection() {
             </div><span className="cover-disclaimer">Illustrative cover</span></div>
           </div>
         </article>)}</div>
-        <div className="work-more"><span>Let's connect and talk about your next idea.</span><a className="text-link" href={profile.facebook} target="_blank" rel="noopener noreferrer"><Facebook size={17} /> Connect on Facebook <ArrowUpRight size={16} /><span className="sr-only"> (opens in a new tab)</span></a></div>
+        <div className="work-more"><span>Let's connect and talk about your next idea.</span><a className="text-link" href={`mailto:${profile.email}`}><Mail size={19} /> Email me directly <ArrowUpRight size={18} /></a></div>
       </div>
     </section>
   );
