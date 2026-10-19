@@ -1,3 +1,7 @@
+import surgicalOncology from "../assets/projects/surgical-oncology.jpg";
+import kalinaw from "../assets/projects/kalinaw.jpg";
+import eci from "../assets/projects/eci.jpg";
+
 // Update personal details and content here without changing the layout components.
 export const profile = {
   name: "Kim Carlo Rosita",
@@ -31,20 +35,20 @@ export const projects = [
   {
     id: "portfolio", number: "01", title: "Doctor's portfolio website", category: "Freelance web development",
     description: "A responsive website for a surgical oncologist, presenting professional background, expertise, and contact details with a focus on mobile usability and accessibility.",
-    tech: ["React", "Tailwind CSS"], cover: "portfolio", period: "Mar — Jun 2025", contribution: "Website design & development",
-    website: "https://surgicaloncology.vercel.app", repository: "https://github.com/kcrosita23/doctors", linkLabel: "View repository",
-    status: "Repository available",
+    tech: ["React", "Tailwind CSS"], image: surgicalOncology, period: "Mar — Jun 2025", contribution: "Website design & development",
+    website: "https://surgicaloncology.vercel.app",
+    status: "Live website",
   },
   {
     id: "coffee", number: "02", title: "Kalinaw Coffee", category: "Freelance project",
     description: "A coffee shop website developed for Kalinaw Coffee, bringing the business and its identity to the web.",
     website: "https://kalinawcoffee.netlify.app",
-    tech: ["React", "Tailwind CSS"], cover: "coffee", period: "Oct 2025", contribution: "Web application development", status: "Project overview",
+    tech: ["React", "Tailwind CSS"], image: kalinaw, period: "Oct 2025", contribution: "Web application development", status: "Project overview",
   },
   {
     id: "eci-website", number: "03", title: "Everywhere Consulting Inc.", category: "Company website",
     description: "A company website presenting ECI's products, solutions, services, and contact information. My work includes website maintenance, enhancements, and deployment updates.",
-    tech: ["HTML", "CSS", "JavaScript"], cover: "company", period: "Company website", contribution: "Website maintenance & enhancements",
+    tech: ["HTML", "CSS", "JavaScript"], image: eci, period: "Company website", contribution: "Website maintenance & enhancements",
     website: "https://everywhereconsulting.com/eci-preview/", status: "Website preview",
   },
   {

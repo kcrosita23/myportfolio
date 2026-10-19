@@ -28,16 +28,16 @@ The authoritative content file is `src/data/portfolio.js`:
 
 - `profile`: name, role, contact details, and Facebook profile URL.
 - `navigation`: labels and section IDs.
-- `projects`: title, description, technology list, cover style, and optional website and repository URLs.
+- `projects`: title, description, technology list, landing-page image, and optional website URL.
 - `capabilities`: technology groups and supporting descriptions.
 - `experiences`: employment history and descriptions.
 - `biography` and `toolGroups`: programming and professional background, plus everyday tools.
 
 Only add achievements, clients, outcomes, dates, and availability statements you can confirm. The biography, role progression, and project dates were updated from the supplied resume. Education and academic honors are omitted at the owner's request. Review employment dates when your circumstances change. Current website contact details remain in place because the resume lists different ones.
 
-The current project covers are **illustrations**, not screenshots of deployed projects. Selected work includes Surgical Oncology, Kalinaw Coffee, the Everywhere Consulting Inc. website preview, and BBCCC loan/payroll systems. The three websites use the owner's supplied live URLs; the ECI destination is labeled as a preview. The doctor's repository link is also retained. Projects without a supplied destination show a descriptive status instead of an inactive button. The live destinations could not be reached from the editing environment, so their availability still needs a browser check before publishing.
+Selected work uses landing-page screenshots stored in `src/assets/projects/`. The public-site images and prominent Visit website buttons open the supplied destinations in a new tab. Repository links are omitted. BBCCC retains an illustrative cover until its landing page can be captured; the internal application returned Magic license error -119 during capture. Its internal address is not linked from the public portfolio.
 
-To add a real project screenshot, store it under `src/assets/`, import it into the content module, and update `ProjectCover` in `src/components/ProjectsSection.jsx` to render the image with suitable alternative text, dimensions, and lazy loading. Remove the illustration caption for actual screenshots.
+To refresh a screenshot, capture the landing page and replace its image file. Keep the 16:9 preview framing and review desktop and mobile layouts.
 
 The portrait is `src/assets/profile-pic.png`. Its framing is controlled by `.portrait-frame` in `src/index.css`.
 
