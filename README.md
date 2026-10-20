@@ -72,7 +72,9 @@ Browser tests can intercept the EmailJS request to exercise loading, success, an
 
 Edit the page title, description, and Open Graph/Twitter text in `index.html`. The favicon is `public/favicon.svg`.
 
-A canonical URL and absolute social image URL should be added when the final public domain is confirmed. The project currently assumes deployment at a domain root. For a subdirectory deployment, configure Vite's `base` to match that path and verify generated asset URLs.
+The canonical domain is `https://kimcarlo.vercel.app/`. Open Graph and Twitter previews reference `public/social-preview.png` (1200 × 630). Update these absolute URLs together if the public domain changes. The project assumes deployment at a domain root.
+
+The four selected projects use a two-column desktop grid and a single column below 800px. `App.jsx` resolves incoming section fragments after React mounts. It also uses a cleaned-up IntersectionObserver and the Web Animations API for one-time section/card entrances; content stays visible if animation is unavailable. Reduced-motion preferences disable entrances and hover motion. Responsive WebP portraits are generated from the retained original `src/assets/profile-pic.png`.
 
 Publish the contents of `dist/` to your static host after a successful build. No deployment is performed by the build or preview commands.
 

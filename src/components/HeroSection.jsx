@@ -1,5 +1,6 @@
 import { ArrowDown, ArrowUpRight, Facebook, MapPin } from "lucide-react";
-import portrait from "../assets/profile-pic.png";
+import portrait from "../assets/portrait-850.webp";
+import portraitSmall from "../assets/portrait-480.webp";
 import { profile } from "../data/portfolio";
 
 export default function HeroSection() {
@@ -22,7 +23,7 @@ export default function HeroSection() {
         </div>
         <div className="portrait-composition">
           <div className="portrait-frame">
-            <img src={portrait} alt="Kim Carlo Rosita" width="849" height="926" fetchPriority="high" />
+            <img src={portrait} srcSet={`${portraitSmall} 480w, ${portrait} 850w`} sizes="(max-width: 560px) 85vw, (max-width: 799px) 45vw, 470px" alt="Kim Carlo Rosita" width="849" height="926" fetchPriority="high" />
             <div className="portrait-caption"><span>KIM CARLO ROSITA</span><span>DESIGN → DEVELOPMENT</span></div>
           </div>
           <div className="portrait-note"><span className="note-symbol" aria-hidden="true">✳</span><span>Built with purpose.<br />Refined with care.</span></div>

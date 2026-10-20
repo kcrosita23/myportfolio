@@ -28,6 +28,50 @@ export default function App() {
   }, [theme]);
 
   useEffect(() => {
+    // The initial fragment may be resolved before React has rendered its target.
+    const scrollToFragment = (event) => {
+      const id = window.location.hash.slice(1);
+      const target = id && document.getElementById(id);
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      target?.scrollIntoView({ behavior: event?.type && !reducedMotion ? "smooth" : "instant", block: "start" });
+    };
+    const frame = requestAnimationFrame(scrollToFragment);
+    window.addEventListener("hashchange", scrollToFragment);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("hashchange", scrollToFragment);
+    };
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const nodes = [...document.querySelectorAll(".section-heading, .project-card, .about-intro, .capability, .experience-item, .contact-copy, .contact-form")];
+    const animations = new Set();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return;
+        observer.unobserve(target);
+        if (media.matches || !target.animate) return;
+        const index = target.matches(".project-card") ? nodes.filter((node) => node.matches(".project-card")).indexOf(target) % 2 : 0;
+        const animation = target.animate([
+          { opacity: 0.35, transform: "translateY(16px)" },
+          { opacity: 1, transform: "translateY(0)" },
+        ], { duration: 480, delay: index * 70, easing: "cubic-bezier(.22,1,.36,1)" });
+        animations.add(animation);
+        animation.onfinish = () => animations.delete(animation);
+      });
+    }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
+    nodes.forEach((node) => observer.observe(node));
+    const stopMotion = () => { if (media.matches) animations.forEach((animation) => animation.cancel()); };
+    media.addEventListener("change", stopMotion);
+    return () => {
+      observer.disconnect();
+      animations.forEach((animation) => animation.cancel());
+      media.removeEventListener("change", stopMotion);
+    };
+  }, []);
+
+  useEffect(() => {
     const sections = [...document.querySelectorAll("main > section[id]")];
     const observer = new IntersectionObserver((entries) => {
       const visible = entries.filter((entry) => entry.isIntersecting)
