@@ -35,27 +35,27 @@ export const navigation = [
 export const projects = [
   {
     id: "portfolio", number: "01", title: "Doctor's portfolio website", category: "Freelance web development",
-    description: "A responsive website for a surgical oncologist, presenting professional background, expertise, and contact details with a focus on mobile usability and accessibility.",
-    tech: ["React", "Tailwind CSS"], image: surgicalOncology, period: "Mar — Jun 2025", contribution: "Website design & development",
+    description: "A website for a surgical oncology team, presenting the doctors' professional backgrounds, areas of expertise, contact details, and clinic schedules.",
+    tech: ["React", "Tailwind CSS"], image: surgicalOncology, period: "Mar — Jun 2025", contribution: "Sole developer · Website design & development",
     website: "https://surgicaloncology.vercel.app",
     status: "Live website",
   },
   {
     id: "coffee", number: "02", title: "Kalinaw Coffee", category: "Freelance project",
-    description: "A coffee shop website developed for Kalinaw Coffee, bringing the business and its identity to the web.",
+    description: "A website introducing Kalinaw Coffee to the web, showcasing its menu, branch locations, and the story behind the business.",
     website: "https://kalinawcoffee.netlify.app",
-    tech: ["React", "Tailwind CSS"], image: kalinaw, period: "Oct 2025", contribution: "Web application development", status: "Project overview",
+    tech: ["React", "Tailwind CSS"], image: kalinaw, period: "Oct 2025", contribution: "Sole developer · Website design & development", status: "Project overview",
   },
   {
     id: "eci-website", number: "03", title: "Everywhere Consulting Inc.", category: "Company website",
-    description: "A company website presenting ECI's products, solutions, services, and contact information. My work includes website maintenance, enhancements, and deployment updates.",
-    tech: ["HTML", "CSS", "JavaScript"], image: eci, period: "Company website", contribution: "Website maintenance & enhancements",
+    description: "A company website presenting ECI's products, solutions, services, partners, clients, and contact information. I handle its development, enhancements, and deployment updates.",
+    tech: ["HTML", "CSS", "JavaScript"], image: eci, contribution: "Sole developer · Development, enhancements & deployment",
     website: "https://everywhereconsulting.com/eci-preview/", status: "Website preview",
   },
   {
-    id: "business-systems", number: "04", title: "Loan & payroll systems", category: "BBCCC / Enterprise applications",
-    description: "Contributed to the design, development, and deployment of loan and payroll management systems using Magic Software.",
-    tech: ["Magic Software", "Magic Web Client"], image: bbcccconnect, period: "Jun 2025 — Feb 2026", contribution: "Systems engineering & system design", status: "Enterprise project overview",
+    id: "business-systems", number: "04", title: "Loan Management System", category: "BBCCC / Enterprise applications",
+    description: "A web application for managing online loan applications, built with Magic Software and Magic Web Client.",
+    tech: ["Magic Software", "Magic Web Client"], image: bbcccconnect, period: "Jun 2025 — Feb 2026", contribution: "Sole developer · System design & development", status: "Enterprise project overview",
   },
 ];
 

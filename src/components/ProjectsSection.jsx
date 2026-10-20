@@ -19,7 +19,7 @@ export default function ProjectsSection() {
           <ProjectCover project={project} />
           <div className="project-info"><div className="project-category"><span>{project.category}</span><span>{project.number}</span></div>
             <h3>{project.title}</h3><p>{project.description}</p>
-            <div className="project-contribution"><span>{project.period}</span><span>{project.contribution}</span></div>
+            <div className="project-contribution">{project.period && <span>{project.period}</span>}<span>{project.contribution}</span></div>
             <ul className="tags" aria-label={`${project.title} technologies`}>{project.tech.map((tech) => <li key={tech}>{tech}</li>)}</ul>
             <div className="project-footer">
               {project.website ? <a className="project-visit" href={project.website} target="_blank" rel="noopener noreferrer">Visit website<ArrowUpRight size={20} /><span className="sr-only"> — {project.title} (opens in a new tab)</span></a> : <span className="project-status">{project.status}</span>}
