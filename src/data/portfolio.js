@@ -54,8 +54,8 @@ export const projects = [
   },
   {
     id: "business-systems", number: "04", title: "Loan Management System", category: "BBCCC / Enterprise applications",
-    description: "A web application for managing online loan applications, built with Magic Software and Magic Web Client.",
-    tech: ["Magic Software", "Magic Web Client"], image: bbcccconnect, period: "Jun 2025 — Feb 2026", contribution: "Sole developer · System design & development", status: "Enterprise project overview",
+    description: "A web application for managing online loan applications, built with Angular, Magic Software, and Magic Web Client.",
+    tech: ["Angular", "Magic Software", "Magic Web Client"], image: bbcccconnect, period: "Jun 2025 — Feb 2026", contribution: "Sole developer · System design & development", status: "Enterprise project overview",
   },
 ];
 
