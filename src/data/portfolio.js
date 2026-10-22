@@ -1,4 +1,4 @@
-import bbcccconnect from "../assets/projects/bbcccconnect.jpg";
+import bbcccconnect from "../assets/projects/bbcccconnect-welcome.png";
 import surgicalOncology from "../assets/projects/surgical-oncology.jpg";
 import kalinaw from "../assets/projects/kalinaw.jpg";
 import eci from "../assets/projects/eci.jpg";
@@ -21,7 +21,8 @@ export const biography = [
 ];
 
 export const toolGroups = [
-  { title: "Development & collaboration", tools: ["Visual Studio Code", "GitHub", "GitLab", "Microsoft Office", "Google Workspace"] },
+  { title: "Software development", tools: ["Magic xpa Studio", "Angular", "React", "JavaScript", "Git", "Visual Studio Code"] },
+  { title: "Collaboration & productivity", tools: ["GitHub", "GitLab", "Microsoft Office", "Google Workspace"] },
   { title: "Design & multimedia", tools: ["Figma", "Canva", "Adobe Photoshop", "Adobe Premiere", "CapCut"] },
 ];
 
@@ -53,8 +54,15 @@ export const projects = [
     website: "https://everywhereconsulting.com/eci-preview/", status: "Website preview",
   },
   {
-    id: "business-systems", number: "04", title: "Loan Management System", category: "BBCCC / Enterprise applications",
-    description: "A web application for managing online loan applications, built with Angular, Magic Software, and Magic Web Client.",
+    id: "business-systems", number: "04", title: "Web-Based Loan Management System — BBCCC", category: "BBCCC / Enterprise applications",
+    featured: true,
+    highlightTitles: ["Loan workflows", "Development & integration", "System deployment"],
+    description: "Designed and developed a web-based application for managing online loan applications using Angular and Magic Web Client, integrated with the existing Magic xpa enterprise system.",
+    highlights: [
+      "Developed loan review workflows, application status management, member search, and loan reporting interfaces.",
+      "Handled application development, database integration, and troubleshooting across the web client and enterprise application.",
+      "Handled system deployment, application updates, and troubleshooting.",
+    ],
     tech: ["Angular", "Magic Software", "Magic Web Client"], image: bbcccconnect, period: "Jun 2025 — Feb 2026", contribution: "Sole developer · System design & development", status: "Enterprise project overview",
   },
 ];
