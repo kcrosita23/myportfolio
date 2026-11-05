@@ -2,6 +2,7 @@ import bbcccconnect from "../assets/projects/bbcccconnect-welcome.png";
 import surgicalOncology from "../assets/projects/surgical-oncology.jpg";
 import kalinaw from "../assets/projects/kalinaw.jpg";
 import eci from "../assets/projects/eci.jpg";
+import monograph from "../assets/projects/monograph.png";
 
 // Update personal details and content here without changing the layout components.
 export const profile = {
@@ -21,7 +22,8 @@ export const biography = [
 ];
 
 export const toolGroups = [
-  { title: "Software development", tools: ["Magic xpa Studio", "Angular", "React", "JavaScript", "Git", "Visual Studio Code"] },
+  { title: "Software development", tools: ["Magic xpa Studio", "Angular", "React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "shadcn/ui", "Git", "Visual Studio Code"] },
+  { title: "Backend & deployment", tools: ["Supabase", "Vercel"] },
   { title: "Collaboration & productivity", tools: ["GitHub", "GitLab", "Microsoft Office", "Google Workspace"] },
   { title: "Design & multimedia", tools: ["Figma", "Canva", "Adobe Photoshop", "Adobe Premiere", "CapCut"] },
 ];
@@ -52,6 +54,12 @@ export const projects = [
     description: "A company website presenting ECI's products, solutions, services, partners, clients, and contact information. I handle its development, enhancements, and deployment updates.",
     tech: ["HTML", "CSS", "JavaScript"], image: eci, contribution: "Sole developer · Development, enhancements & deployment",
     website: "https://everywhereconsulting.com/eci-preview/", status: "Website preview",
+  },
+  {
+    id: "monograph", number: "05", title: "Monograph", category: "Personal web application",
+    description: "A personal workspace that brings calendars, notes, tasks, and everyday thoughts together in one focused interface.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase", "Vercel"], image: monograph, contribution: "Sole developer · Website design & development",
+    website: "https://self-monograph.vercel.app", status: "Live website",
   },
   {
     id: "business-systems", number: "04", title: "Web-Based Loan Management System — BBCCC", category: "BBCCC / Enterprise applications",

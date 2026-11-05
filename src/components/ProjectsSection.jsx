@@ -42,7 +42,7 @@ export default function ProjectsSection() {
             <h3>{project.title}</h3><p>{project.description}</p>
             {project.highlights?.length > 0 && <ul className="project-highlights" aria-label={`${project.title} responsibilities`}>{project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>}
             <div className="project-contribution">{project.period && <span>{project.period}</span>}<span>{project.contribution}</span></div>
-            <ul className="tags" aria-label={`${project.title} technologies`}>{project.tech.map((tech) => <li key={tech}>{tech}</li>)}</ul>
+            {project.tech.length > 0 && <ul className="tags" aria-label={`${project.title} technologies`}>{project.tech.map((tech) => <li key={tech}>{tech}</li>)}</ul>}
             <div className="project-footer">
               {project.website ? <a className="project-visit" href={project.website} target="_blank" rel="noopener noreferrer">Visit website<ArrowUpRight size={20} /><span className="sr-only"> — {project.title} (opens in a new tab)</span></a> : <span className="project-status">{project.status}</span>}
             </div>
