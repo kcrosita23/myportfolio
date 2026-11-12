@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Facebook, MapPin } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Download, Facebook, MapPin } from "lucide-react";
 import portrait from "../assets/portrait-850.webp";
 import portraitSmall from "../assets/portrait-480.webp";
 import { profile } from "../data/portfolio";
@@ -13,6 +13,7 @@ export default function HeroSection() {
           <p className="hero-intro">I'm <strong>{profile.name}</strong>, a full stack developer and system engineer building responsive websites and practical business applications.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#projects">Explore my work <ArrowUpRight size={19} /></a>
+            <a className="text-link" href={`${import.meta.env.BASE_URL}kim-carlo-rosita-resume.pdf`} download="Kim Carlo Rosita - Resume.pdf">Download résumé (PDF) <Download size={18} aria-hidden="true" /></a>
             <a className="text-link" href="#contact">Get in touch <ArrowUpRight size={18} /></a>
           </div>
           <div className="hero-meta">

@@ -75,7 +75,7 @@ h2 { font-size: clamp(34px, 4vw, 49px); line-height: 1.15; letter-spacing: -.035
 .hero h1 .serif { color: var(--accent); letter-spacing: -.035em; }
 .hero-intro { color: var(--muted); font-size: 16px; line-height: 1.85; max-width: 470px; margin-top: 28px; }
 .hero-intro strong { font-weight: 500; color: var(--text); }
-.hero-actions { display: flex; align-items: center; gap: 28px; margin-top: 32px; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 28px; margin-top: 32px; }
 .hero-meta { display: flex; align-items: center; gap: 17px; margin-top: 42px; color: var(--muted); font-size: 13px; }
 .hero-meta > span:first-child { display: flex; align-items: center; gap: 7px; }
 .hero-meta a { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; }
